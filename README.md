@@ -20,6 +20,13 @@ as params. On Ubuntu it would look like this:
 ```shell
 python binary_search.py "paSsword" "anotherSecurePassw0rd"
 ```
+Alternatively, the entries of a KDBX3/KDBX4 password-storage can be checked automatically:
+
+```shell
+python binary_search.py --kdbx <path to kdbx3/4-file>
+```
+You will be prompted for the password of the keystore. Entries with leaked passwords receive an additional note "Password was in <N> leak(s)!". KDBX-support is based on [pykeepass](https://github.com/pschmitt/pykeepass) by [pschmitt](https://github.com/pschmitt).
+
 
 If the password contains characters which could be encoded 
 differently with different encodings 
